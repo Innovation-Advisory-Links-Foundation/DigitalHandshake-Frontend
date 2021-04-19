@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+      "pragma": "React", // Pragma to use, default to "React"
+      "fragment": "Fragment", // Fragment to use (may be a property of <pragma>), default to "Fragment"
+      "version": "detect", // React version. "detect" automatically picks the version you have installed.
+      "flowVersion": "0.53" // Flow version
+    },
+    "propWrapperFunctions": [
+      "forbidExtraProps",
+      { "property": "freeze", "object": "Object" },
+      { "property": "myFavoriteWrapper" }
+    ],
+    "linkComponents": ["Hyperlink", { "name": "Link", "linkAttribute": "to" }]
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "comma-spacing": "warn",
+    "comma-style": "warn",
+    "func-call-spacing": "warn",
+    "no-whitespace-before-property": "warn",
+    "no-multi-spaces": "warn",
+    "space-in-parens": "warn",
+    "spaced-comment": "warn",
+    "arrow-parens": "warn",
+    "no-var": "error",
+    "prefer-const": "warn",
+    "prefer-destructuring": "warn",
+    "prefer-template": "warn",
+    "prefer-rest-params": "warn",
+    "rest-spread-spacing": "warn",
+    "template-curly-spacing": "warn",
+    "prefer-arrow-callback": "warn",
+    "object-shorthand": "warn",
+    "no-useless-rename": "warn",
+    "no-useless-computed-key": "warn",
+    "no-duplicate-imports": "warn",
+    "no-duplicate-case": "warn",
+    "block-spacing": "warn",
+    "brace-style": "warn",
+    "camelcase": "off",
+    "computed-property-spacing": "warn",
+    "eol-last": "warn",
+    "function-call-argument-newline": ["warn", "consistent"]
+  }
+}
