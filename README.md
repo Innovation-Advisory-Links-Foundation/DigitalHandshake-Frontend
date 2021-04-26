@@ -122,7 +122,62 @@ npm run code:fix
 
 ## Screenshoots
 
-TODO
+### Login
+
+<div align="center">
+    <img 
+        align="center" 
+        src="./resources/login.png" 
+        alt="Login"
+    />
+    </div>
+<p align="center"> <i>Figure 3.</i> Login page for first access. </p>
+
+
+### Login with Password
+
+<div align="center">
+    <img 
+        align="center" 
+        src="./resources/login_with_password.png" 
+        alt="Login with password" 
+    />
+    </div>
+<p align="center"> <i>Figure 4.</i> Login page for quick access via password (after first access). </p>
+
+
+### Explore Page
+
+<div align="center">
+    <img 
+        align="center" 
+        src="./resources/explore.png" 
+        alt="Explore Page" 
+    />
+    </div>
+<p align="center"> <i>Figure 5.</i> Explore page which shows requests made by other users. </p>
+
+### Requests Page
+
+<div align="center">
+    <img 
+        align="center" 
+        src="./resources/requests.png" 
+        alt="Requests Page" 
+    />
+    </div>
+<p align="center"> <i>Figure 6.</i> Requests page which shows the requests made by the logged in user. </p>
+
+### Handshakes Page
+
+<div align="center">
+    <img 
+        align="center" 
+        src="./resources/handshakes.png" 
+        alt="Handshakes Page" 
+    />
+    </div>
+<p align="center"> <i>Figure 7.</i> Handshakes page which shows the handshakes where the logged in user participates as a dealer or bidder. </p>
 
 ## Development Rules
 
