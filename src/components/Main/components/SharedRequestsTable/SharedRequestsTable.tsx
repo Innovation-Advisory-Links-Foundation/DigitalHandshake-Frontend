@@ -145,11 +145,13 @@ function SharedRequestsTable({
               <Col className="gutter-row" span={20}>
                 <Popover
                   title="Contractual Terms"
-                  trigger="hover"
+                  trigger="clickable"
                   content={
-                    <Typography.Text copyable>
-                      {contractualTerms ? contractualTerms : "Loading..."}
-                    </Typography.Text>
+                    <div style={{ maxWidth: "50vw" }}>
+                      <Typography.Text copyable>
+                        {contractualTerms ? contractualTerms : "Loading..."}
+                      </Typography.Text>
+                    </div>
                   }
                 >
                   {

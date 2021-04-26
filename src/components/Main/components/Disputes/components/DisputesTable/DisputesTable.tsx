@@ -68,17 +68,19 @@ function DisputesTable({ user, disputes, disputesMotivations, onVote }: Props) {
               <Col className="gutter-row" span={20}>
                 <Popover
                   title="Dealer Motivation"
-                  trigger="hover"
+                  trigger="clickable"
                   content={
-                    <Typography.Text copyable>
-                      {dealerMotivation
-                        ? dealerMotivation[0].motivation
-                        : "Loading..."}
-                    </Typography.Text>
+                    <div style={{ maxWidth: "50vw" }}>
+                      <Typography.Text copyable>
+                        {dealerMotivation
+                          ? dealerMotivation[0].motivation
+                          : "Loading..."}
+                      </Typography.Text>
+                    </div>
                   }
                 >
                   {
-                    <Typography.Text style={{ color: "#192A51" }}>
+                    <Typography.Text>
                       {`${dealerMotivation[0].motivation.slice(0, 40)}...`}
                     </Typography.Text>
                   }
@@ -96,7 +98,7 @@ function DisputesTable({ user, disputes, disputesMotivations, onVote }: Props) {
                     </Typography.Text>
                   }
                 >
-                  {<SafetyCertificateOutlined />}
+                  {<SafetyCertificateOutlined style={{ color: "green" }} />}
                 </Popover>
               </Col>
             </Row>
@@ -136,17 +138,19 @@ function DisputesTable({ user, disputes, disputesMotivations, onVote }: Props) {
               <Col className="gutter-row" span={20}>
                 <Popover
                   title="Bidder Motivation"
-                  trigger="hover"
+                  trigger="clickable"
                   content={
-                    <Typography.Text copyable>
-                      {dealerMotivation
-                        ? dealerMotivation[0].motivation
-                        : "Loading..."}
-                    </Typography.Text>
+                    <div style={{ maxWidth: "50vw" }}>
+                      <Typography.Text copyable>
+                        {dealerMotivation
+                          ? dealerMotivation[0].motivation
+                          : "Loading..."}
+                      </Typography.Text>
+                    </div>
                   }
                 >
                   {
-                    <Typography.Text style={{ color: "#192A51" }}>
+                    <Typography.Text>
                       {`${dealerMotivation[0].motivation.slice(0, 40)}...`}
                     </Typography.Text>
                   }
@@ -164,7 +168,7 @@ function DisputesTable({ user, disputes, disputesMotivations, onVote }: Props) {
                     </Typography.Text>
                   }
                 >
-                  {<SafetyCertificateOutlined />}
+                  {<SafetyCertificateOutlined style={{ color: "green" }} />}
                 </Popover>
               </Col>
             </Row>

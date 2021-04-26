@@ -2,10 +2,12 @@ import {
   BankOutlined,
   CarryOutOutlined,
   CheckOutlined,
+  DislikeOutlined,
   FormOutlined,
   FrownFilled,
   FrownOutlined,
   InteractionOutlined,
+  LikeOutlined,
   LockOutlined,
   PaperClipOutlined,
   SafetyCertificateOutlined,
@@ -23,6 +25,7 @@ import {
   Popconfirm,
   message,
   Modal,
+  Image,
 } from "antd";
 import Table, { ColumnsType, ColumnType } from "antd/es/table";
 import React, { useState } from "react";
@@ -239,15 +242,17 @@ function HandshakesTable({
               <Col className="gutter-row" span={20}>
                 <Popover
                   title="Contractual Terms"
-                  trigger="hover"
+                  trigger="clickable"
                   content={
-                    <Typography.Text copyable>
-                      {contractualTerms ? contractualTerms : "Loading..."}
-                    </Typography.Text>
+                    <div style={{ maxWidth: "50vw" }}>
+                      <Typography.Text copyable>
+                        {contractualTerms ? contractualTerms : "Loading..."}
+                      </Typography.Text>
+                    </div>
                   }
                 >
                   {
-                    <Typography.Text style={{ color: "#192A51" }}>
+                    <Typography.Text>
                       {`${contractualTerms.slice(0, 40)}...`}
                     </Typography.Text>
                   }
@@ -301,7 +306,7 @@ function HandshakesTable({
         <Typography>
           {proposedPrices && proposedPrices?.length > 0
             ? proposedPrices[proposedPrices.length - 1]
-                .slice(0, proposedPrices.length - 10)
+                .slice(0, proposedPrices[proposedPrices.length - 1].length - 9)
                 .concat(" DHS")
             : "Not negotiated..."}
         </Typography>
@@ -717,10 +722,7 @@ function HandshakesTable({
                           disabled={
                             unlockedByDealer || unlockedByBidder ? true : false
                           }
-                        >
-                          {" "}
-                          UNLOCK{" "}
-                        </Button>
+                        ></Button>
                       </Popconfirm>
                     </Col>
                   </Row>
@@ -761,7 +763,7 @@ function HandshakesTable({
                         type="link"
                         htmlType="submit"
                         shape="round"
-                        icon={<TrophyOutlined style={{ fontSize: "24px" }} />}
+                        icon={<CheckOutlined style={{ fontSize: "24px" }} />}
                         onClick={() => setId(handshake.request_id)}
                       />
                     </Popconfirm>
@@ -821,12 +823,16 @@ function HandshakesTable({
                 <Col span={24}>
                   <Typography.Text>
                     {votesForUser >= 2 ? (
-                      <Typography>
-                        You Won <SmileOutlined style={{ fontSize: "16px" }} />
+                      <Typography style={{ fontSize: "1.2rem" }}>
+                        {user.accountName}{" "}
+                        <TrophyOutlined style={{ fontSize: "24px" }} />
                       </Typography>
                     ) : (
                       <Typography>
-                        You Lost <FrownOutlined style={{ fontSize: "16px" }} />
+                        {handshake.dealer == user.accountName
+                          ? handshake.bidder
+                          : handshake.dealer}{" "}
+                        <TrophyOutlined style={{ fontSize: "24px" }} />
                       </Typography>
                     )}
                   </Typography.Text>
