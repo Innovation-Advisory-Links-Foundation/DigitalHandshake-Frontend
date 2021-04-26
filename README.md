@@ -2,12 +2,11 @@
 
 **A blockchain-based solution for making digital handshakes guaranteeing transparency on identity, code and payments.**
 
-- Building a new concept of trust from platform to code through an EOSIO blockchain-based solution.
-- Democratic and decentralized dispute mechanism involving the selection of pseudo-random professionals reducing the cost-benefit ratio.
-- Decentralized escrow service designed to secure tokens payments and automatically redistribute amounts based on handshake status.
-- Accelerates the digitalization process for those who cannot sustain the costs by providing a unique and priceless digital identity.
+- Building a new form of trust in the digital handshake process (from platform to code) through an EOSIO blockchain-based solution.
+- Fair and decentralized dispute resolution with a pseudo-random selection of jurors for reducing the cost-benefit ratio.
+- Automatic token payments through a decentralized and bulletproof escrow service.
 
-You can learn more about the main challenges of building trust for digitally signed handshake agreements to the article on our [OverTheBlock Medium](https://medium.com/overtheblock/) page.
+You can learn more about the main challenges of building trust for digital handshakes on the article on our [OverTheBlock Medium](https://medium.com/overtheblock/) page.
 
 ## Table of Contents
 
@@ -34,19 +33,19 @@ You can learn more about the main challenges of building trust for digitally sig
     </div>
 <p align="center"> <i>Figure 1.</i> The high-level overview of Digital Handshake workflow. </p>
 
-Figure 1 shows an example of the high-level overview of our solution's workflow for the digital handshake. As we can see, the different types of actors and process steps for the correct definition and conclusion of the agreement are presented. Specifically, there are two different categories of stakeholders:
+- **Users**. An individual or entity registered on the platform and uniquely recognized in the blockchain through a human-readable address. The user can have the Dealer's role when it posts a request for a particular service (e.g., I need a website!) or Bidder's role when it proposes itself for satisfying a specific demand. A user can play both roles, one for each handshake.
 
-- **Users.** An individual registered on the platform and uniquely recognized in the blockchain through a human-readable address. The user can have the Dealer's role when it posts a request for a particular service (e.g., I need a website!) or Bidder's role when it proposes to satisfy a particular request for a service. A user can play both roles, one for each handshake.
-
-- **Jurors.** Professionals or legal experts recorded on the platform assisting parties in the judgment of a dispute. It does not have a concrete motivation to participate in the handshake but is interested in receiving new dispute assignments to increase earnings.
+- **Jurors**. Professionals or legal experts recorded on the platform. They assist the parties in the judgment of a dispute. They do not have a concrete motivation to participate in the handshake but are interested in receiving new dispute assignments to increase earnings.
 
 The on-chain business logic is broken down into three smart contracts, where each solves a particular function:
 
-- **Token.** A standard ERC20 token (DHS) offers price stability when making any form of payment.
+- **Token**. A standard ERC20 token (DHS) offers price stability when making any form of contactless payment.
 
-- **Service.** All features for stipulating digital handshakes. Interacts with the escrow for automating token redistribution according to handshake status.
+- **Service**. All features for making digital handshakes.
 
-- **Escrow.** A service that locks amounts of DHS tokens for automating payments.
+- **Escrow**. A service that locks amounts of DHS tokens for automating payments.
+
+You can find more about the on the [Digital Handshake backend repository](https://github.com/Innovation-Advisory-Links-Foundation/DigitalHandshake-Backend).
 
 ## Frontend
 
@@ -59,7 +58,7 @@ The on-chain business logic is broken down into three smart contracts, where eac
     </div>
 <p align="center"> <i>Figure 2.</i> The high-level overview of Digital Handshake architecture. </p>
 
-Figure 2 shows the architecture of the proof-of-concept of a decentralized application (dApp). The frontend is a React web application. To reduce complexity in user access, we have implemented a custom login component with a password. This works like the classic client-side wallet providers comply with the key's security rules and is easily digestible by the user. Provides a tabular layout that allows users to move quickly between the various handshakes through a sorting and filtering system. The user bar that shows rating, current balance and quantity of tokens locked allows always to keep track of token movements. Communicate directly with the blockchain and off-chain database through two different ad-hoc services. The blockchain service was implemented from scratch with the eosjs library to ensure greater freedom in managing transactions and related feedback.
+The frontend is a [React](https://reactjs.org/) web application. To reduce complexity in user access, we have implemented a custom login component with a password. This works like the SoA client-side wallet providers comply with the key's security rules and is easily digestible by the user. Provides a tabular layout that allows users to move quickly between the various handshakes through a sorting and filtering system. The user bar that shows rating, current balance and quantity of tokens locked allows always to keep track of token movements. Communicate directly with the blockchain and the off-chain database through two different ad-hoc services. The [EOSIO](https://eos.io/) blockchain service was implemented from scratch with the [eosjs](https://eos.io/for-developers/build/eosjs/) library to ensure greater freedom in managing transactions.
 
 ## Getting Started
 
@@ -96,10 +95,10 @@ REACT_APP_NEGOTIATIONS_API="api/v1/negotiations"
 REACT_APP_MOTIVATIONS_API="api/v1/motivations"
 ```
 
-- The `REACT_APP_EOS_DHS_SERVICE_CONTRACT`, `REACT_APP_EOS_DHS_TOKEN_CONTRACT` and `REACT_APP_EOS_DHS_ESCROW_CONTRACT` are the names of the smart contracts.
-- The `REACT_APP_EOS_HTTP_ENDPOINT` represents the endpoint of the EOSIO development node.
-- The `REACT_APP_MONGODB_EXPRESS_NODE_SERVER_ENDPOINT` represents the endpoint of the Express NodeJS server which receives requests for the MongoDB instance.
-- The `REACT_APP_USER_API`, `REACT_APP_NEGOTIATIONS_API` and `REACT_APP_MOTIVATIONS_API` are the names of the rest API main routes.
+- The `REACT_APP_EOS_DHS_SERVICE_CONTRACT`, `REACT_APP_EOS_DHS_TOKEN_CONTRACT` and `REACT_APP_EOS_DHS_ESCROW_CONTRACT` are the smart contracts names.
+- The `REACT_APP_EOS_HTTP_ENDPOINT` is the endpoint of the EOSIO development node.
+- The `REACT_APP_MONGODB_EXPRESS_NODE_SERVER_ENDPOINT` is the endpoint of the Express NodeJS server which routes requests to the MongoDB instance.
+- The `REACT_APP_USER_API`, `REACT_APP_NEGOTIATIONS_API` and `REACT_APP_MOTIVATIONS_API` are the rest API main routes names.
 
 ### Usage
 
