@@ -111,10 +111,10 @@ function Login({ onHandleLogin }: Props) {
               <Typography style={{ marginBottom: "16px" }}>
                 <img src={DHSLogo} alt="DHS Logo" style={{ width: "512px" }} />
               </Typography>
-              <Text style={{ fontSize: "1.2rem" }}>
+              <Text style={{ fontSize: "1.1rem" }}>
                 {" "}
-                🤝 A frictionless solution for transparent, democratic and
-                secure digital handshakes 🤝{" "}
+                🤝 A platform for making digital handshakes guaranteeing
+                transparency on identity, code and payments 🤝{" "}
               </Text>
             </Typography>
           </Col>

@@ -29,14 +29,14 @@ function LoginCarousel() {
           "https://www.flaticon.com/svg/vstatic/svg/913/913240.svg?token=exp=1618503133~hmac=b1875f0caf84c9e14693e7722a92fd7d"
         }
         title="Resolve Disputes"
-        description="Reduce your cost-benefit ratio in opening a dispute through a democratic and decentralized dispute resolution mechanism"
+        description="Reduce cost-benefit ratio for opening a dispute through our fair and decentralized mechanism."
       />
       <LoginCarouselItem
         iconURL={
           "https://cdn3.iconfinder.com/data/icons/popular-cryptocurrencies-vol-2019-1/80/eos-cryptocurrency-token-coin-ecosystem-adoption-512.png"
         }
         title="Secure Payments"
-        description="Forget about late or missed payments through an escrow service designed to secure tokens payments and automatically redistribute amounts based on handshake status"
+        description="Automatic token payments through an intelligent escrow service designed to lock token amounts and redistribute them based on the handshake status"
       />
     </Carousel>
   );
